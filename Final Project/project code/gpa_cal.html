@@ -1,0 +1,118 @@
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" type="text/css" href="style.css">
+<div class="hed"><h1>AUM | Auburn university of Montgomery</h1></div>
+
+<div class="nav">
+<ul><li >
+    <a  href="index.html"><h2>Dept. of CS & IS</h2></a></li>
+<li><a href="index.html"><h2>Home</h2></a></li>
+<li><a href="course.html"><h2>Course Details</h2></a></li>
+<li><a href="teaching_application_details.html"><h2>TA (Teaching Assistant)</h2></a></li>
+<li><a class="active" href="gpa_cal.html"><h2>GPA</h2></a></li>
+<li><a href="contact.html"><h2>Contact Us</h2></a></li>
+</ul>
+</div>
+</head>
+<body>
+<div class="form-style" id="gpa_div">
+<form id="for_form">
+    <br><br><br><br><br><br>
+     <div class="inner-wrap">
+        <h2>Enter Subject Details:</h2>
+        <label>Subject Name: <input type="text" name="sname1" /></label>
+        <label>Subject Grade: <input type="text" name="sg1" /></label>
+        <label>Subject Credit: <input type="text" name="sc1" /></label>
+        <label>SUbject Name <input type="text" name="sname2" /></label>
+        <label>Subject Grade: <input type="text" name="sg2" /></label>
+        <label>Subject Credit: <input type="text" name="sc2" /></label>
+           
+   
+   </div> 
+    </div>
+</form>
+
+<div class="btn">
+     <input type="submit" name="Submit Record" onclick="gpa_calculator()" />
+    </div>
+</div>
+
+
+<div class="form-style" id="display_result" style="display:none;" >
+     <br><br><br><br><br><br>
+     <div class="inner-wrap">
+<h2>GPA Calculation</h2>
+<p id="result_grid1" ></p>
+<p id="result_grid2"></p>
+<p id="result_grid3"></p>
+<p id="result_grid4"></p>
+<p id="result_grid5"></p>
+<p id="result_grid6"></p>
+<p id="result_grid7"></p>
+<p id="result_grid8"></p>
+
+</div>
+</div>
+<script type="text/javascript">
+
+function gpa_calculator() {
+
+document.getElementById('display_result').style.display = "block";
+
+  var f_form = document.getElementById("gpa_div");
+  if (f_form.style.display === "none") {
+         f_form.style.display = "block";
+      } else {
+         f_form.style.display = "none";
+      }
+
+  var data = document.getElementById("for_form");
+  var sname1 = data.elements[0].value;
+  var sgrade1 = data.elements[1].value;
+  var scredit1 = parseInt(data.elements[2].value);
+  var sname2 = data.elements[3].value;
+  var sgrade2 = data.elements[4].value;
+  var scredit2 = parseInt(data.elements[5].value);
+
+    var sgrade1_value;
+  if(sgrade1 == 'A'){
+    sgrade1_value = 4;
+  }else if (sgrade1=='B') {sgrade1_value = 3;}
+  else if (sgrade1=='C') {sgrade1_value = 2;}
+  else if (sgrade1=='D') {sgrade1_value = 1;}
+  else if (sgrade1=='F') {sgrade1_value = 0;}
+
+  var sgrade2_value;
+  if(sgrade2 == 'A'){
+    sgrade2_value = 4;
+
+  }else if (sgrade2=='B') {sgrade2_value = 3;}
+  else if (sgrade2=='C') {sgrade2_value = 2;}
+  else if (sgrade2=='D') {sgrade2_value = 1;}
+  else if (sgrade2=='F') {sgrade2_value = 0;}
+
+    var final_grade_value = sgrade1_value + sgrade2_value;
+    var s1_info = (scredit1 * sgrade1_value);
+    var s2_info = (scredit2 * sgrade2_value);
+    var final_credit = scredit1 + scredit2;
+    var GPA_Value= (s1_info + s2_info)/final_credit;
+
+ document.getElementById("result_grid1").innerHTML = "Subject Name: " + sname1;
+  document.getElementById("result_grid2").innerHTML = " Subject Grade: " + sgrade1;
+  document.getElementById("result_grid3").innerHTML = " Subject Credit: :" + scredit1;
+  document.getElementById("result_grid4").innerHTML = "Subject Name:" + sname2;
+  document.getElementById("result_grid5").innerHTML = "Subject Grade: " + sgrade2;
+  document.getElementById("result_grid6").innerHTML = "Subject Credit: " +scredit2;
+  document.getElementById("result_grid7").innerHTML = "GPA : " +GPA_Value;
+  
+
+}
+</script>
+</body>
+<div class="f">  
+  <p style="padding-top: 6px;">Desigend By : Aishwarya</p>
+    <p>Connect me here : aishwarya04111996@gmail.com</p>
+    <p>Copyright by Aishwarya , All the rights reserved - 2020</p>
+</div>
+</html>

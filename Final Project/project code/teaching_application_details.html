@@ -1,0 +1,106 @@
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" type="text/css" href="style.css">
+<div class="hed"><h1>AUM | Auburn university of Montgomery</h1></div>
+
+<div class="nav">
+<ul><li >
+    <a href="index.html"><h2>Dept. of CS & IS</h2></a></li>
+<li><a href="index.html"><h2>Home</h2></a></li>
+<li><a href="course.html"><h2>Course Details</h2></a></li>
+<li><a class="active" href="teaching_application_details.html"><h2>TA (Teaching Assistant)</h2></a></li>
+<li><a href="gpa_cal.html"><h2>GPA</h2></a></li>
+<li><a href="contact.html"><h2>Contact Us</h2></a></li>
+</ul>
+</div>
+</head>
+<body>
+<div class="form-style" id="for_form">
+<form id="teaching_form">
+    <br><br><br><br><br><br>
+     <div class="inner-wrap">
+        <h2>Enter Applicant's Details:</h2>
+        <label>Your Full Name <input type="text" name="name" /></label>
+        <label>Email Address <input type="email" name="email" /></label>
+        <label>Phone Number <input type="text" name="pno" /></label>
+        <label>Student Id <input type="text" name="sid" /></label>
+        <label>GPA Value <input type="text" name="gpa" /></label>
+        <label>Select Gender <select name=""><option>Male</option><option>Female</option></select> </label>
+        <label>Submission Date <input type="date" name="sdate" /></label>
+        <label>Comments <textarea name="comments"></textarea></label>
+        
+ 
+    
+    </div> 
+    </div>
+</form>
+<div class="btn">
+     <input type="submit" name="Submit Data" onclick="teaching_assistant()" />
+   </div>
+
+
+<div class="form-style" id="display_result" style="display:none;" >
+     <br><br><br><br><br><br>
+     <div class="inner-wrap">
+<h2>Teaching Assistant Details</h2>
+<p id="result_grid1" ></p>
+<p id="result_grid2"></p>
+<p id="result_grid3"></p>
+<p id="result_grid4"></p>
+<p id="result_grid5"></p>
+<p id="result_grid6"></p>
+<p id="result_grid7"></p>
+<p id="result_grid8"></p>
+
+
+</div>
+</div></div>
+
+<script type="text/javascript">
+
+function teaching_assistant() {
+
+document.getElementById('display_result').style.display = "block";
+  
+  var f_form = document.getElementById("for_form");
+  if (f_form.style.display === "none") {
+         f_form.style.display = "block";
+      } else {
+         f_form.style.display = "none";
+      }
+
+
+  var data = document.getElementById("teaching_form");
+  var full_name = data.elements[0].value;
+  var email = data.elements[1].value;
+  var phone = data.elements[2].value;
+  var student_id = data.elements[3].value;
+  var gpa_value = data.elements[4].value;
+  var gender = data.elements[5].value;
+  var submission_date = data.elements[6].value;
+  var comments = data.elements[7].value;
+
+  
+  
+ document.getElementById("result_grid1").innerHTML = "Your Name: " + full_name;
+
+  document.getElementById("result_grid2").innerHTML = " Your Id: " + email;
+  document.getElementById("result_grid3").innerHTML = " Your GPA :" + phone;
+  document.getElementById("result_grid4").innerHTML = "Your Submission Date:" + student_id;
+  document.getElementById("result_grid5").innerHTML = "Your Gender: " + gpa_value;
+  document.getElementById("result_grid6").innerHTML = "Your Comments: " +gender;
+  document.getElementById("result_grid7").innerHTML = "Your Comments: " +submission_date;
+  document.getElementById("result_grid8").innerHTML = "Your Comments: " +comments;
+  
+
+}
+</script>
+</body>
+
+<div class="f">  
+  <p style="padding-top: 6px;">Desigend By : Aishwarya</p>
+    <p>Connect me here : aishwarya04111996@gmail.com</p>
+    <p>Copyright by Aishwarya , All the rights reserved - 2020</p>
+</div>
+</html>
