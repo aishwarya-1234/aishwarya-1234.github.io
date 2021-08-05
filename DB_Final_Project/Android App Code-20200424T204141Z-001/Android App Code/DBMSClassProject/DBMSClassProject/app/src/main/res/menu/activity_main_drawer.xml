@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/menu_top"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:title="@string/menu_gallery" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:title="@string/menu_slideshow" />
+    </group>
+    <group
+           android:id="@+id/menu_middle"
+
+           android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_aggregate"
+            android:title="Use of Aggregate Function: Max" />
+        <item
+            android:id="@+id/nav_group"
+            android:title="Use of Group by" />
+        <item
+            android:id="@+id/nav_order"
+            android:title="Use of Order by" />
+    </group>
+
+    <group android:id="@+id/menu_bottom"
+           android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_set"
+            android:title="Use of Set Operation" />
+        <item
+            android:id="@+id/nav_nested"
+            android:title="Use Nested/Sub Queries" />
+        <item
+            android:id="@+id/nav_join"
+            android:title="Use of Join Operation" />
+    </group>
+</menu>

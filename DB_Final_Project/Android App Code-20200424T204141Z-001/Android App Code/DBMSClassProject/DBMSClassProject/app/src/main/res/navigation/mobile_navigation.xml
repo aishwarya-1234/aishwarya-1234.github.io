@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.mycaptain.dbmsclassproject.Fragment.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
+            app:destination="@id/nav_home_second" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_home_second"
+        android:name="com.mycaptain.dbmsclassproject.Fragment.HomeSecondFragment"
+        android:label="@string/home_second"
+        tools:layout="@layout/fragment_home_second">
+        <action
+            android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
+            app:destination="@id/nav_home" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.mycaptain.dbmsclassproject.Fragment.DirectedMovies10Fragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_directed_movies_10" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.mycaptain.dbmsclassproject.Fragment.TvShowsFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_tv_shows" />
+
+    <fragment
+        android:id="@+id/nav_aggregate"
+        android:name="com.mycaptain.dbmsclassproject.Fragment.AggregateFunMaxFragment"
+        android:label="Use of Aggregate Function: Max"
+        tools:layout="@layout/fragment_aggregate_fun_max" />
+
+    <fragment
+        android:id="@+id/nav_group"
+        android:name="com.mycaptain.dbmsclassproject.Fragment.UseOfGroupFragment"
+        android:label="Use of Group by"
+        tools:layout="@layout/fragment_use_of_group" />
+
+    <fragment
+        android:id="@+id/nav_order"
+        android:name="com.mycaptain.dbmsclassproject.Fragment.UseOfOrderFragment"
+        android:label="Use of Order by"
+        tools:layout="@layout/fragment_use_of_order" />
+
+    <fragment
+        android:id="@+id/nav_set"
+        android:name="com.mycaptain.dbmsclassproject.Fragment.UseOfSetFragment"
+        android:label="Use of Set Operation"
+        tools:layout="@layout/fragment_use_of_set" />
+    <fragment
+        android:id="@+id/nav_nested"
+        android:name="com.mycaptain.dbmsclassproject.Fragment.UseNestedOrSubqueriesFragment"
+        android:label="Use Nested/Sub Queries"
+        tools:layout="@layout/fragment_use_nested_or_subqueries" />
+    <fragment
+        android:id="@+id/nav_join"
+        android:name="com.mycaptain.dbmsclassproject.Fragment.UseOfJoinFragment"
+        android:label="Use of Join Operatin"
+        tools:layout="@layout/fragment_use_nested_or_subqueries" />
+
+</navigation>
